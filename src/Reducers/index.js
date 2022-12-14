@@ -2,9 +2,9 @@ import { combineReducers } from 'redux';
 import {GET_NUMBER_CART,ADD_CART, DECREASE_QUANTITY, INCREASE_QUANTITY, DELETE_CART} from  '../Actions';
 
 // dummy data
-import one from "../Assets/Images/1.jpg"
-import two from "../Assets/Images/2.jpg"
-import three from "../Assets/Images/3.jpg"
+import one from "../Assets/Images/1.png"
+import two from "../Assets/Images/2.png"
+import three from "../Assets/Images/3.png"
 import four from "../Assets/Images/4.jpg"
 import five  from "../Assets/Images/5.jpg"
 
@@ -25,7 +25,7 @@ const cakeData = [
     },
     {
         id:3,
-        name:"Vanilla cake with pink roses .",
+        name:"Vanilla cake with orange roses .",
         image:three,
         price:50,
         description:"With the aroma of fresh rose flowers, this cake is here to win hearts.",

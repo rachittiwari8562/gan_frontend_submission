@@ -6,24 +6,16 @@ import {
   Link
 } from "react-router-dom";
 import RoundMenuItem from './round_menu_item';
-
-const menuItems = [
-    { name: 'Pizzas',current: true,routes:"/homepage/pizza/"},
-    { name: 'Cakes', current: false,routes:"/homepage/cakes/" },
-    { name: 'Icecreams',current: false,routes:"/homepage/icecreams/" },
-    { name: 'Breads',current:false,routes:"/homepage/breads/"}
-  ]
-
+import {menuItems} from "../Constants/routing_constant"
 
 
 const Menu = () =>{
 
     const [currentMenuItem, selectMenuItem] = useState("Cakes")
     return (
-        <div className="grid grid-cols-1">
-            <p className='text-3xl font-bold mb-8'>Menu</p>
+        <div className="grid grid-cols-4 gap-x-1 md:grid-cols-1">
+            <p className='col-span-4 md:col-span-1 text-xl md:text-3xl font-bold mb-2 md:mb-8'>Menu</p>
         {menuItems.map((item)=>(
-            // <p>{item.name}</p>
             <RoundMenuItem key={item.name} selected={currentMenuItem} item={item} selectMenuItem={selectMenuItem}></RoundMenuItem>
         ))}
         </div>
